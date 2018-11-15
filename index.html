@@ -12,19 +12,14 @@
     <button type="button" name="button">Envoyer</button>
   </form>
   <script>
-  $('#lastName').focus(function(){
-    $('#lastName').css('border', '1px solid green')
-  })
-  $('#firstName').focus(function(){
-    $('#firstName').css('border', '1px solid green')
-  })
-  $('#lastName').focusout(function(){
-    $('#lastName').css('border', '1px solid red')
-  })
-  $('#firstName').focusout(function(){
-    $('#firstName').css('border', '1px solid red')
-  })
-
+  $(function(){
+    $('input[type="text"]').focus(function(){
+      $(this).css('border', '1px solid green');
+    });
+    $('input[type="text"]').focusout(function(){
+      $(this).css('border', '1px solid red');
+    });
+  });
   </script>
 </body>
 </html>
